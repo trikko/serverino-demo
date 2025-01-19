@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverino Demo</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.bunny.net/css?family=montserrat:400,600" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>QRCode Creator</h1>
+        <div class="input-group">
+            <input type="text" id="textInput" placeholder="Enter text for QR code" onkeyup="if(event.key === 'Enter') generateQR()">
+            <button onclick="generateQR()">Create</button>
+        </div>
+        <canvas id="qrCanvas" width="256" height="256"></canvas>
+    </div>
+
+    <script>
+        function generateQR() {
+            const text = document.getElementById('textInput').value;
+            if (!text) {
+                alert('Please enter some text');
+                return;
+            }
+
+            fetch(`/qr?data=${encodeURIComponent(text)}`)
+                .then(response => response.blob())
+                .then(blob => {
+                    const img = new Image();
+                    img.onload = () => {
+                        const canvas = document.getElementById('qrCanvas');
+                        const ctx = canvas.getContext('2d');
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    };
+                    img.src = URL.createObjectURL(blob);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error generating QR code');
+                });
+        }
+    </script>
+</body>
+</html>

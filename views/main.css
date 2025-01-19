@@ -1,0 +1,83 @@
+body {
+   font-family: Arial, sans-serif;
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 20px;
+   /* Sfondo moderno con gradiente */
+   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+   min-height: 100vh;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   background: rgba(255, 255, 255, 0.9);
+   padding: 2rem;
+   border-radius: 8px;
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+   width: 100%;
+   max-width: 400px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 15px;
+}
+
+input[type="text"] {
+   width: 100%;
+   padding: 12px;
+   font-size: 16px;
+   border: 2px solid #e0e0e0;
+   border-radius: 8px;
+   transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+   outline: none;
+   border-color: #28a745;
+}
+
+button {
+   padding: 12px 30px;
+   background-color: #28a745;
+   color: white;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: transform 0.2s ease, background-color 0.3s ease;
+   margin-top: 10px;
+}
+
+button:hover {
+   background-color: #1e7e34;
+   transform: translateY(-2px);
+}
+
+button:active {
+   transform: translateY(0);
+}
+
+#qrCanvas {
+   border: 1px solid #ccc;
+   margin-top: 20px;
+   border-radius: 8px;
+   background: white;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+   font-family: 'Montserrat', Arial, sans-serif;
+   color: #2c3e50;
+   margin-bottom: 1.5rem;
+   text-align: center;
+   font-size: 2.5rem;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+   font-weight: 600;
+   letter-spacing: -0.5px;
+}
