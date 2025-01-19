@@ -1,10 +1,10 @@
 # Serverino QR Code Creator Demo
 
-A minimal demonstration of using Serverino to create a self-contained QR code generator web application. This project showcases how to build a completely standalone executable (~1.5MB) that runs on any Linux system without installation or external dependencies.
+A minimal demonstration of using Serverino to create a self-contained QR code generator web application. This project showcases how to build a completely standalone executable (<1.5MB) that runs on any Linux system without installation or external dependencies.
 
 ## Key Features
 
-- Single binary executable (~1.5MB)
+- Single binary executable (<1.5MB)
 - Zero external dependencies
 - No installation required
 - Runs on any Linux system
