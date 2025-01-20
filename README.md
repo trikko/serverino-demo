@@ -17,7 +17,7 @@ This demo illustrates the power of Serverino for creating lightweight, portable 
 
 ## Usage
 
-Simply download the executable on release page and run it:
+Simply download the executable on release page (created with github actions) and run it:
 ```bash
 ./serverino-demo
 ```
