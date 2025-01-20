@@ -32,12 +32,12 @@ jobs:
     # Copy compiled file from Docker container to host
     - name: Copy compiled binary
       run: |
-        docker cp serverino-container:/app/serverino-test .
+        docker cp serverino-container:/app/serverino-demo .
         docker rm serverino-container
 
     # Upload the binary as an artifact
     - name: Upload binary as artifact
       uses: actions/upload-artifact@v3
       with:
-        name: serverino-test
-        path: serverino-test
+        name: serverino-demo
+        path: serverino-demo
